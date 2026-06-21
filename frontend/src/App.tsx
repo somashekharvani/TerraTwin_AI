@@ -694,73 +694,107 @@ export default function App() {
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 pt-28 pb-16">
           
           {/* Left Column: Cover Page / Hero Vision Card */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-6 relative">
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-8 relative">
             {/* Ambient glows inside cover */}
             <div className="absolute -top-32 -left-32 w-64 h-64 bg-eco-500/10 rounded-full blur-3xl pointer-events-none" />
             
             <div className="space-y-6 relative z-10">
-              {/* Green Platform Badge */}
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-eco-400 bg-eco-500/10 border border-eco-500/20 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-eco-500 animate-ping" />
-                DIGITAL TWIN PLATFORM
-              </span>
+              {/* PromptWars Challenge 3 Badge */}
+              <div className="flex flex-wrap gap-2 items-center">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-eco-400 bg-eco-500/10 border border-eco-500/20 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-eco-500 animate-ping" />
+                  PromptWars Challenge 3 Submission
+                </span>
+                <span className="inline-flex items-center gap-1 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20">
+                  ⚡ Stable
+                </span>
+              </div>
 
-              {/* Tagline */}
-              <div className="space-y-3">
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight">
-                  TerraTwin AI
+              {/* Title & Tagline */}
+              <div className="space-y-4">
+                <h2 className="text-5xl lg:text-7xl font-black text-white leading-tight tracking-tight">
+                  TerraTwin <span className="text-transparent bg-clip-text bg-gradient-to-r from-eco-400 to-emerald-500">AI</span>
                 </h2>
-                <p className="text-xl lg:text-2xl font-bold text-slate-300 leading-tight">
-                  See your carbon future before it happens.
+                <h3 className="text-xl lg:text-2xl font-extrabold text-slate-300 tracking-wide uppercase">
+                  AI-Powered Digital Carbon Twin Platform
+                </h3>
+                <p className="text-lg lg:text-xl font-medium text-eco-400 italic">
+                  "See Your Carbon Future Before It Happens."
                 </p>
-                <p className="text-base text-slate-400 max-w-xl leading-relaxed mt-4">
-                  AI-powered Digital Carbon Twin that predicts future emissions and recommends actions before they happen.
+                <p className="text-slate-400 max-w-xl leading-relaxed text-sm lg:text-base">
+                  TerraTwin AI helps users monitor, understand, predict, and reduce their carbon footprint through AI-powered sustainability analytics, future emission forecasting, and personalized environmental recommendations.
                 </p>
               </div>
 
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4 pt-2">
+              {/* Developer Profile Card */}
+              <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80 max-w-xl backdrop-blur-md">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-eco-500 to-emerald-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-eco-500/20">
+                    SV
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black uppercase tracking-wider text-slate-500">👨‍💻 Developed By</h4>
+                    <p className="text-base font-bold text-white">Somashekhar Vani</p>
+                    <p className="text-xs text-slate-400 font-medium">
+                      Electronics & Communication Engineering • Sambhram Institute of Technology, Bengaluru
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tech Stack Strip */}
+              <div className="space-y-2.5 max-w-xl">
+                <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-500">🛠️ Technology Stack</h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {['React', 'TypeScript', 'Node.js', 'Express', 'Prisma ORM', 'Socket.io', 'Gemini AI', 'Solidity'].map((tech) => (
+                    <span key={tech} className="px-2.5 py-1 rounded bg-slate-950/60 border border-slate-800/80 text-[10px] font-bold text-slate-300 font-mono">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action and Demo Access Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-xl pt-2">
                 <button
                   onClick={() => {
                     setIsRegistering(true);
                     setShowAuthModal(true);
                   }}
-                  className="px-8 py-3.5 bg-eco-500 hover:bg-eco-600 active:scale-[0.98] rounded-xl text-white font-bold transition text-sm shadow-lg shadow-eco-500/25 flex items-center gap-2"
+                  className="px-6 py-4 bg-eco-500 hover:bg-eco-600 active:scale-[0.98] rounded-2xl text-white font-bold transition text-sm shadow-lg shadow-eco-500/25 flex items-center justify-center gap-2 group"
                 >
-                  Get Started
-                  <span className="text-base">→</span>
+                  Get Started 
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </button>
+
+                <button
+                  onClick={() => {
+                    setEmail('demo@terratwin.ai');
+                    setPassword('demo123');
+                    setIsRegistering(false);
+                    setShowAuthModal(true);
+                  }}
+                  className="p-4 rounded-2xl bg-slate-950/60 hover:bg-slate-900/60 border border-slate-800/80 text-left transition group"
+                >
+                  <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider group-hover:text-eco-400 transition">Try Demo Account</h3>
+                  <div className="grid grid-cols-2 gap-2 mt-1.5">
+                    <div>
+                      <span className="text-[9px] text-slate-500 block">Email:</span>
+                      <span className="text-xs font-semibold text-white font-mono">demo@terratwin.ai</span>
+                    </div>
+                    <div>
+                      <span className="text-[9px] text-slate-500 block">Password:</span>
+                      <span className="text-xs font-semibold text-white font-mono">demo123</span>
+                    </div>
+                  </div>
                 </button>
               </div>
-
-              {/* Demo Account Credentials Quick Access Card */}
-              <button
-                onClick={() => {
-                  setEmail('demo@terratwin.ai');
-                  setPassword('demo123');
-                  setIsRegistering(false);
-                  setShowAuthModal(true);
-                }}
-                className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-800/80 border border-slate-800/80 text-left transition w-full max-w-md group"
-              >
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider group-hover:text-eco-400 transition">Try Demo Account</h3>
-                <div className="grid grid-cols-2 gap-4 mt-2">
-                  <div>
-                    <span className="text-[10px] text-slate-500 block">Email:</span>
-                    <span className="text-sm font-semibold text-white font-mono">demo@terratwin.ai</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-slate-500 block">Password:</span>
-                    <span className="text-sm font-semibold text-white font-mono">demo123</span>
-                  </div>
-                </div>
-              </button>
             </div>
 
             {/* Platform footer branding */}
-            <div className="pt-6 border-t border-slate-800/60 text-[10px] text-slate-500 font-medium">
-              <p>PromptWars Challenge 3 Submission</p>
-              <p className="text-slate-400 mt-1">Developed by <strong>Somashekhar Vani</strong></p>
-              <p>Sambhram Institute of Technology, Bengaluru</p>
+            <div className="pt-4 border-t border-slate-800/60 flex justify-between items-center text-[10px] text-slate-500 font-medium max-w-xl">
+              <p>AI for Sustainability • Climate Intelligence</p>
+              <p>© 2026 TerraTwin AI</p>
             </div>
           </div>
 
