@@ -34,6 +34,16 @@
 ### Architecture Preview
 ![Architecture Preview](docs/images/architecture_preview.png)
 
+#### 🔄 Architecture Flow
+```text
+User → React Frontend → Express API → Prisma ORM → Database
+```
+
+**Additional Services**:
+* **Gemini AI**: Powers narrative generation and advisor chat.
+* **Socket.io**: Powers real-time energy telemetry stream.
+* **ERC20 EcoToken**: Smart contract logic (Solidity) for green reward tokens.
+
 ---
 
 ### Project Info
@@ -61,6 +71,20 @@ For instant access to the authenticated dashboard and all features, log in using
 * **⚡ Quick Activity Logger**: Instantly logs transportation, electricity, food, water, or shopping activities with live carbon updates.
 * **🏆 Challenges & Achievements**: A reward hub containing active tasks (Walking, Saving energy) and unlockable badges (Earth Protector, 7-Day Streak) awarding EcoTokens.
 * **📅 Journey Timeline**: Dynamic list of milestones (joined, first scans, carbon reduction achievements) generated directly from user history.
+
+---
+
+## 📂 Project Structure
+
+```text
+TerraTwin_AI/
+├── frontend/          React + Vite + TypeScript
+├── backend/           Express + Prisma API
+├── contracts/         ERC20 ECO Token
+├── docs/              Architecture & Documentation
+├── deployment/        Deployment configurations
+└── README.md
+```
 
 ---
 
