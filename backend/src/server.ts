@@ -14,10 +14,12 @@ app.disable('x-powered-by');
 // Configure Helmet security headers
 app.use(helmet());
 
-// CORS configuration matching our React frontend dev server
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: (origin, callback) => {
+      // Dynamically echo the origin to support credentials and prevent CORS blocks on Vercel
+      callback(null, true);
+    },
     credentials: true,
   }),
 );
