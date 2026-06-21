@@ -32,7 +32,7 @@
 ---
 
 ### Architecture Preview
-![TerraTwin Globe](docs/images/rotating_globe.png)
+![Architecture Preview](docs/images/architecture_preview.png)
 
 ---
 
@@ -141,7 +141,7 @@ npm run test --workspace frontend
 ## 📸 Platform Screenshots
 
 ### 📊 1. Cover Page & Product Vision
-![Product Vision](docs/images/rotating_globe.png)
+![Product Vision](docs/images/cover_page.png)
 
 ### 📈 2. Sustainability Dashboard
 ![Sustainability Dashboard](docs/images/dashboard_charts.png)
