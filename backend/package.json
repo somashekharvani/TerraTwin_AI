@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "nodemon --watch src -e ts --exec ts-node src/index.ts",
     "build": "prisma generate && tsc",
-    "start": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx prisma db push --accept-data-loss && DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx ts-node prisma/seed.ts && DATABASE_URL=${DATABASE_URL:-file:./dev.db} node dist/index.js",
+    "start": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx prisma db push --accept-data-loss && DATABASE_URL=${DATABASE_URL:-file:./dev.db} node prisma/seed.js && DATABASE_URL=${DATABASE_URL:-file:./dev.db} node dist/index.js",
     "test": "jest --runInBand --detectOpenHandles --forceExit",
     "test:coverage": "jest --runInBand --detectOpenHandles --forceExit --coverage",
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.11.0",
@@ -48,6 +48,6 @@
     "typescript": "^5.4.5"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "node prisma/seed.js"
   }
 }

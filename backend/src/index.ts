@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
 });
 
 // Start Server Listening
-server.listen(PORT, () => {
+server.listen(Number(PORT), '0.0.0.0', () => {
   console.log(
     `[Server] Running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`,
   );
