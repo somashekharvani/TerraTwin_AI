@@ -45,7 +45,12 @@ let getMetaEnv = () => {
     return (globalObj as any).process?.env || {};
   }
 };
-const API_URL = getMetaEnv().VITE_API_URL || 'http://localhost:5000';
+const defaultApiUrl = typeof window !== 'undefined' && 
+  window.location.hostname !== 'localhost' && 
+  window.location.hostname !== '127.0.0.1'
+    ? 'https://terratwin-backend-gxk9.onrender.com'
+    : 'http://localhost:5000';
+const API_URL = getMetaEnv().VITE_API_URL || defaultApiUrl;
 
 interface CarbonEntry {
   id: string;
