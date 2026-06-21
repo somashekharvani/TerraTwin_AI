@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+coverage
+dev.db
+dev.db-journal
+.env
+package-lock.json
+package.json
+prisma/migrations

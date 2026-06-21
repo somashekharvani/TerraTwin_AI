@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  // For production PostgreSQL deployment:
+  // provider = "postgresql"
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id              String             @id @default(cuid())
+  email           String             @unique
+  passwordHash    String
+  name            String
+  monthlyGoal     Float              @default(600)
+  walletAddress   String?
+  createdAt       DateTime           @default(now())
+  carbonEntries   CarbonEntry[]
+  goals           Goal[]
+  tokenTxns       TokenTransaction[]
+}
+
+model CarbonEntry {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category      String   // transport, energy, food, shopping, waste
+  type          String   // car, electricity, beef, etc.
+  value         Float
+  unit          String   // km, kWh, kg
+  carbonEmitted Float
+  source        String   // manual, bill_ocr, food_camera, geolocation, iot
+  automatic     Boolean  @default(false)
+  metadata      String?  // SQLite-friendly JSON storage as string (or native JSON in PostgreSQL)
+  createdAt     DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([userId, category])
+}
+
+model Goal {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  monthlyTarget Float
+  targetDate    DateTime
+  createdAt     DateTime @default(now())
+
+  @@index([userId])
+}
+
+model TokenTransaction {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action          String   // walked, carpooled, saved_goal, etc.
+  amountECO       Int
+  transactionHash String
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
