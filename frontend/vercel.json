@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/v1/:path*",
-      "destination": "https://api.terratwin.railway.app/api/v1/:path*"
+      "destination": "https://terratwin-backend-gxk9.onrender.com/api/v1/:path*"
     },
     {
       "source": "/(.*)",
