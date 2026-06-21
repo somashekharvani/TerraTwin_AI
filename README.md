@@ -157,8 +157,8 @@ npm run test --workspace frontend
 
 ## 🌐 Live Deployments
 
-- **Frontend Application**: [https://terratwin-ai.vercel.app](https://terratwin-ai.vercel.app)
-- **Backend API Server**: [https://terratwin-ai-production.up.railway.app](https://terratwin-ai-production.up.railway.app)
+- **Frontend Application**: [https://frontend-six-gray-12.vercel.app](https://frontend-six-gray-12.vercel.app)
+- **Backend API Server**: [https://terratwin-backend-gxk9.onrender.com](https://terratwin-backend-gxk9.onrender.com)
 
 ---
 
