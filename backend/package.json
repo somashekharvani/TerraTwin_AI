@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon --watch src -e ts --exec ts-node src/index.ts",
     "build": "prisma generate && tsc",
-    "start": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx prisma db push --accept-data-loss && DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx ts-node prisma/seed.ts && node dist/index.js",
+    "start": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx prisma db push --accept-data-loss && DATABASE_URL=${DATABASE_URL:-file:./dev.db} npx ts-node prisma/seed.ts && DATABASE_URL=${DATABASE_URL:-file:./dev.db} node dist/index.js",
     "test": "jest --runInBand --detectOpenHandles --forceExit",
     "test:coverage": "jest --runInBand --detectOpenHandles --forceExit --coverage",
     "seed": "ts-node prisma/seed.ts"
