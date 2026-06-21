@@ -14,7 +14,7 @@
 * 🔮 **Future Carbon Simulator**: Sliders to preview future emissions based on transportation, diet, and electricity adjustments. Features quick preset scenarios (e.g. *Green Commuter*, *Plant-Based Diet*).
 * 🌍 **Digital Carbon Twin Profile**: Visualizes your carbon twin Persona (`Eco Explorer`, `Carbon Conscious`, `Green Crusader`, `Sustainability Champion`), sustainability score, and annual footprints.
 * 🏆 **ECO Tokens & Challenges**: Game-ready achievements and daily challenges that reward green habits with ERC-20 ECO Tokens.
-* 🔒 **Privacy Audit Dashboard**: Displays SMS/contacts privacy grid and security trust scores to ensure zero persistent storage of uploaded data.
+* 🔒 **Privacy Audit Dashboard**: Displays SMS/contacts privacy grid and security trust scores to ensure privacy-focused processing and automated cleanup policies.
 
 ---
 
@@ -24,7 +24,7 @@
 ---
 
 ### Impact Metrics:
-* **📊 Carbon Tracking Automation**: 100% automated logging for geolocation travel and smart-device sync.
+* **📊 Automated Carbon Tracking**: Automated carbon tracking for supported geolocation and IoT integrations.
 * **🌱 Sustainability Scoring**: Custom algorithm translating activities into index scores (0-100) and letter grades (A+ to F).
 * **⚡ Real-Time Monitoring**: Instantly updates dashboard stats via WebSockets without page reload.
 * **🎯 Personalized Recommendations**: Context-aware AI narratives comparing logs against national/global averages.
@@ -56,7 +56,7 @@ For instant access to the authenticated dashboard and all features, log in using
 * **🧠 Carbon Twin Engine**: Analyzes your monthly activity and generates a Sustainability Score (0-100), digital carbon twin Persona (`Eco Explorer`, `Carbon Conscious`, `Green Crusader`, `Sustainability Champion`), risk indicators, and annual footprint projections.
 * **📖 Carbon Story**: AI-generated markdown narrative of your carbon footprint, habits, and target comparison with a local analytical rules engine fallback when Gemini API keys are omitted.
 * **🔮 Future Simulator**: Sliders to preview future emissions based on transportation, diet, and electricity adjustments. Features quick preset scenarios (e.g. *Green Commuter*, *Plant-Based Diet*).
-* **🔒 Privacy Audit Dashboard**: Tracks permissions, database status, and blocked resource logs (SMS, Contacts, Email) to ensure zero persistent server storage for user images.
+* **🔒 Privacy Audit Dashboard**: Tracks permissions, database status, and blocked resource logs (SMS, Contacts, Email) to ensure privacy-focused processing and automated cleanup policies for user images.
 * **🌎 Earth Health Context**: Compares user annualized footprints against global and national averages, providing letter sustainability grades (`A+` down to `F`) and reduction tips.
 * **⚡ Quick Activity Logger**: Instantly logs transportation, electricity, food, water, or shopping activities with live carbon updates.
 * **🏆 Challenges & Achievements**: A reward hub containing active tasks (Walking, Saving energy) and unlockable badges (Earth Protector, 7-Day Streak) awarding EcoTokens.
@@ -138,40 +138,43 @@ npm run test --workspace frontend
 
 ---
 
-## 📸 Platform Screenshots
+## 🎨 UI Previews & Architecture Mockups
 
-### 📊 1. Cover Page & Product Vision
-![Product Vision](docs/images/cover_page.png)
+> [!NOTE]
+> The screenshots below represent **hifi concept UI mockups and design previews** used during the platform design phase. The actual functional web application client UI renders dynamically and may vary slightly in local deployments.
 
-### 📈 2. Sustainability Dashboard
+### 📊 Cover Page
+![Cover Page](docs/images/cover_page.png)
+
+### 📐 Architecture Diagram
+![Architecture Diagram](docs/images/architecture_preview.png)
+
+### 📈 Sustainability Dashboard
 ![Sustainability Dashboard](docs/images/dashboard_charts.png)
 
-### 🌍 3. Interactive rotating Globe & hotspots
-![Interactive rotating Globe](docs/images/rotating_globe.png)
+### 📸 AI OCR Scanner
+![AI OCR Scanner](docs/images/ai_scanner.png)
 
-### 🧠 4. Digital Carbon Twin Profile
+### 🌍 TerraTwin Globe
+![TerraTwin Globe](docs/images/rotating_globe.png)
+
+### 🧠 Carbon Twin Profile
 ![Carbon Twin Profile](docs/images/profile_page.png)
 
-### ⚡ 5. AI scanner (ocr & receipt parsing)
-![AI Scanner](docs/images/ai_scanner.png)
+### 📖 Carbon Story
+![Carbon Story](docs/images/carbon_story.png)
 
-### 📖 6. AI Generated Carbon Story
-![AI Generated Carbon Story](docs/images/carbon_story.png)
-
-### 🔮 7. Future Habit Simulator & Scenarios
+### 🔮 Future Simulator
 ![Future Simulator](docs/images/future_simulator.png)
 
-### 🔒 8. Privacy & Data Audit Log
+### 🔒 Privacy Audit
 ![Privacy Audit](docs/images/privacy_audit.png)
 
-### 🏆 9. Green Challenges & Achievement Badges
-![Challenges](docs/images/challenges.png)
+### 🏆 Challenges & Achievements
+![Challenges & Achievements](docs/images/challenges.png)
 
-### 👤 10. User Profile & Sustainability Twin Grade
-![User Profile](docs/images/profile_page.png)
-
-### 🥇 11. Community EcoTokens Leaderboard
-![Leaderboard](docs/images/leaderboard.png)
+### 🥇 ECO Token Leaderboard
+![ECO Token Leaderboard](docs/images/leaderboard.png)
 
 ---
 
